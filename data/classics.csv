@@ -245,7 +245,7 @@ perception-3d,2503.22430,MVSAnywhere,Niantic / Univ. of Zaragoza / UCL 等,CVPR 
 perception-3d,2504.09540,EmbodiedOcc++,PKU,ACM MM 2025,PKUHaoWang/EmbodiedOcc2,,,,平面正則與不確定性取樣改進室內高斯佔據預測,
 perception-3d,2501.08643,MonSter++,HUST,TPAMI 2026,,,,,單眼深度先驗雙分支融合，統一雙目與多視角立體,
 perception-3d,2601.17895,LingBot-Depth,Robbyant (Ant Group),arXiv,Robbyant/lingbot-depth,https://technology.robbyant.com/lingbot-depth,,推薦,把感測器深度缺陷當遮罩訊號做深度補全,
-perception-3d,2604.18336,GlassRecon,HKUST / HKU / SUSTech / ASTRI,IROS 2026,jarvisyjw/GlassRecon,,,獲獎;推薦,免訓練，用局部 RANSAC 把深度基礎模型對齊到感測器深度，避開玻璃區的錯誤量測並補回公制尺度,
+perception-3d,2604.18336,GlassRecon,HKUST / HKU / SUSTech / ASTRI,IROS 2026,jarvisyjw/GlassRecon,https://jarvisyjw.github.io/GlassRecon/,,獲獎;推薦,免訓練，用局部 RANSAC 把深度基礎模型對齊到感測器深度，避開玻璃區的錯誤量測並補回公制尺度,
 perception-3d,2506.14709,DiFuse-Net,Samsung Research India,IROS 2025,,,,獲獎,把 RGB 與手機雙像素（dual-pixel）分開編碼後以雙向視差注意力融合估深度,
 perception-3d,2110.15367,Neural Disparity Refinement,Bologna,3DV 2021,,https://cvlab-unibo.github.io/neural-disparity-refinement-web,,獲獎,連續式視差精修網路，可輸出任意解析度，適合手機上高低解析度不對稱的雙目,
 perception-3d,2101.04777,Binary TTC,NVIDIA / UCSB,CVPR 2021,,,,獲獎,把碰撞時間估計改成逐像素二元分類（是否在時限內碰撞），單目、免校正即可當時間柵欄,

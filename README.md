@@ -539,7 +539,7 @@ AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM 與 Real2Sim
 | 新興 | 獲獎 | 2021 | [Neural Disparity Refinement](https://arxiv.org/abs/2110.15367) · [專案頁](https://cvlab-unibo.github.io/neural-disparity-refinement-web) | Bologna | 連續式視差精修網路，可輸出任意解析度，適合手機上高低解析度不對稱的雙目 | 3DV 2021 | 34 | 未公開 |
 | 新興 | 獲獎 | 2025 | [Zero-Shot Scene Flow](https://arxiv.org/abs/2501.10357) · [專案頁](https://research.nvidia.com/labs/lpr/zero_msf/) | NVIDIA / Brown | 聯合估幾何與運動並大規模混合資料訓練，單目場景流首次能 zero-shot 泛化 | CVPR 2025 | 24 | 未公開 |
 | 新興 | 獲獎 | 2026 | [Indoor Open-Vocab Occupancy](https://arxiv.org/abs/2602.22667) | HKUST(GZ) | 針對室內密集幾何與細粒度語意，從單目影像預測開放詞彙 3D occupancy | CVPR 2026 | 8 | 未公開 |
-| 新興 | 獲獎、推薦 | 2026 | [GlassRecon](https://arxiv.org/abs/2604.18336) | HKUST / HKU / SUSTech / ASTRI | 免訓練，用局部 RANSAC 把深度基礎模型對齊到感測器深度，避開玻璃區的錯誤量測並補回公制尺度 | IROS 2026 | 2 | [9](https://github.com/jarvisyjw/GlassRecon) |
+| 新興 | 獲獎、推薦 | 2026 | [GlassRecon](https://arxiv.org/abs/2604.18336) · [專案頁](https://jarvisyjw.github.io/GlassRecon/) | HKUST / HKU / SUSTech / ASTRI | 免訓練，用局部 RANSAC 把深度基礎模型對齊到感測器深度，避開玻璃區的錯誤量測並補回公制尺度 | IROS 2026 | 2 | [9](https://github.com/jarvisyjw/GlassRecon) |
 | 新興 | 獲獎 | 2025 | [DiFuse-Net](https://arxiv.org/abs/2506.14709) | Samsung Research India | 把 RGB 與手機雙像素（dual-pixel）分開編碼後以雙向視差注意力融合估深度 | IROS 2025 | 0 | 未公開 |
 | 新興 | 獲獎 | 2026 | [SeeGroup](https://arxiv.org/abs/2605.28735) | Princeton | 讓模型自行決定點的分層方式，估計透明表面與其後物體的多層深度 | CVPR 2026 | 0 | 未公開 |
 
