@@ -1,4 +1,4 @@
-# Mobile Robot Survey
+# Awesome Robot Navigation
 
 - 加論文、擴充重要論文、新增主題時，先用 Skill 工具呼叫 `update-survey`（`.claude/skills/update-survey/`）。
 - README 與 `docs/quadruped.md`、`docs/wheel-legged.md` 由 `scripts/build_readme.py` 產生，改 `topics/`、`data/`、`digests/` 後重跑，不手改。
