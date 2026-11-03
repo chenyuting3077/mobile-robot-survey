@@ -24,6 +24,7 @@
    | vln | cs.RO, cs.CV | "vision-language navigation", "object goal navigation", "embodied navigation", "navigation foundation model" |
    | local-nav | cs.RO | "visual navigation" AND (diffusion OR "world model" OR "reinforcement learning"), "end-to-end navigation" |
    | semantic-map | cs.RO, cs.CV | "scene graph", "open-vocabulary map", "semantic mapping" |
+   | mobile-manip | cs.RO, cs.CV | "mobile manipulation", "mobile manipulator", "6-DoF grasp", "grasp detection" AND robot, "base placement" |
    | quadruped | cs.RO | (quadruped OR legged) AND (perceptive OR navigation OR terrain) |
    | wheel-legged | cs.RO | "wheel-legged", "wheeled-legged", "legged-wheeled" |
    | slam | cs.RO, cs.CV | SLAM, "visual odometry", "LiDAR-inertial", "place recognition", relocalization |

@@ -15,7 +15,7 @@ from check_data import SUBS, check  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 TOPICS = [
-    "vln", "local-nav", "quadruped", "wheel-legged",
+    "vln", "local-nav", "mobile-manip", "quadruped", "wheel-legged",
     "slam", "reconstruction", "perception-3d", "semantic-map", "det3d", "spatial", "vision", "real2sim",
 ]
 PAGES = {"quadruped", "wheel-legged"}
@@ -26,7 +26,7 @@ HF_BAR = 20  # 收錄條件「HF」：約是 2026-10 候選中按讚數的前 15
 
 HEADER = """# Robot Perception Survey
 
-AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM 與 Real2Sim 前沿論文整理，每週一、四自動更新。
+AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM、Real2Sim，以及 AMR 加手臂（移動操作）的感知前沿論文整理，每週一、四自動更新。
 
 <!-- 本檔由 scripts/build_readme.py 產生，請改 topics/、data/ 或 digests/ 後重跑 -->
 
