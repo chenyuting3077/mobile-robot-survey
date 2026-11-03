@@ -1,6 +1,6 @@
 # Robot Perception Survey
 
-AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM 與 Real2Sim 前沿論文整理，每週一、四自動更新。
+AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM、Real2Sim，以及 AMR 加手臂（移動操作）的感知前沿論文整理，每週一、四自動更新。
 
 <!-- 本檔由 scripts/build_readme.py 產生，請改 topics/、data/ 或 digests/ 後重跑 -->
 
@@ -43,13 +43,14 @@ AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM 與 Real2Sim
 - **期刊**：Science Robotics、T-RO、IJRR、RA-L、T-ASE、JFR、TPAMI、IJCV
 - **會議**（接收論文公布時）：RSS、CoRL、ICRA、IROS、CVPR、ICCV、ECCV、3DV、SIGGRAPH、WACV、NeurIPS、ICLR、ICML；EMNLP、ACL（只看 VLN）
 
-最後更新：2026-11-01
+最後更新：2026-11-03
 
 ## 目錄
 
 - [本月趨勢（2026-11）](#本月趨勢2026-11)
 - [VLN 與導航基礎模型](#vln-與導航基礎模型)
 - [局部導航與規劃（diffusion / world model / 探索）](#局部導航與規劃diffusion--world-model--探索)
+- [移動操作感知（導航銜接、抓取、物件遞交）](#移動操作感知導航銜接抓取物件遞交)
 - [SLAM 與定位](#slam-與定位)
 - [3D 場景重建（feed-forward、SfM、3DGS／NeRF）](#3d-場景重建feed-forwardsfm3dgsnerf)
 - [深度估計與 occupancy](#深度估計與-occupancy)
@@ -69,6 +70,8 @@ AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM 與 Real2Sim
 - 觀察：feed-forward 模型往「固定記憶體的串流」與「SLAM 前端」發展（OVGGT、FILT3R、UniSim-SLAM），也開始用在 VIO 初始化（FF-VIO-Init）。
 - 觀察：這批補收的 VLN 多半把語言模型當高層決策，再接上幾何或技能層（OpenFrontier、AgentVLN）。
 - 推測：固定記憶體的串流重建可望讓長時間建圖上機；可在 Jetson 上跑長序列、量記憶體與延遲驗證。
+- 觀察：移動操作的瓶頸集中在最後一段抓取：FOUND-IT++ 上機導航到物件 100%，抓取只有 50%，作者歸因於缺主動深度回饋；HoMMI 的消融實驗中，只用腕部或只用頭部相機都大幅掉分（Delivery 15%、5%，完整 85%）。
+- 推測：導航可以用輕量單目地圖，但抓取仍需要腕部或主動深度；可在同一台車上固定抓取模型，比較有無腕部深度的抓取成功率驗證。
 
 ## VLN 與導航基礎模型
 
@@ -188,6 +191,38 @@ AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM 與 Real2Sim
 | 2026-09 | [UniWM](https://arxiv.org/abs/2510.08713) | University of Washington | 單一自迴歸骨幹同時做視覺預想與規劃，讓動作選擇直接依據想像結果，並加入記憶 | 導航成功率最高提升 30% | [GitHub](https://github.com/UWMILab/UniWM) | ECCV 2026 |
 
 更早的 1 篇見 [topics/local-nav.md](topics/local-nav.md)。
+
+## 移動操作感知（導航銜接、抓取、物件遞交）
+
+### 在解決的問題
+
+- 導航到操作的銜接：導航只需粗略位置，抓取需要精確得多的幾何；底盤停在哪裡（base placement）決定手臂搆不搆得到。
+- 抓取位姿感知：對沒看過的物件與夾爪，從部分點雲生成無碰撞的 6-DoF 抓取，且要容忍深度雜訊。
+- 多相機分工：機身或頭部相機看全局，腕部相機看接觸區，目標要能在相機間接手、被遮擋時不跟丟。
+- 共用場景表示：同一份地圖要同時回答「在哪裡」與「怎麼操作」，並隨物件被移動、門被打開而更新。
+
+### 重要論文（資料日期 2026-11-01）
+
+| 分級 | 理由 | 年 | 論文 | 機構 | 重點 | 來源 | 引用 | Star |
+|---|---|---|---|---|---|---|---|---|
+| 主流 | 引用、Star、獲獎 | 2022 | [AnyGrasp](https://arxiv.org/abs/2212.08333) · [專案頁](https://graspnet.net/anygrasp.html) | SJTU | 以真實感知資料與解析標籤做稠密監督，輸出 7-DoF 抓取並可跨幀追蹤，對深度雜訊穩健；實機料堆抓取 93.3% | T-RO 2023 | 561 | [1,050](https://github.com/graspnet/anygrasp_sdk) |
+| 主流 | 引用、Star、基準 | 2023 | [HomeRobot](https://arxiv.org/abs/2306.11565) | Georgia Tech / Meta FAIR / CMU / SFU | 定義開放詞彙移動操作（OVMM）benchmark，含模擬與實機；基線實機只有 20%，定位整合難度 | CoRL 2023 | 174 | [1,249](https://github.com/facebookresearch/home-robot) |
+| 主流 | 引用、Star | 2025 | [GraspGen](https://arxiv.org/abs/2507.13097) · [專案頁](https://graspgen.github.io) | NVIDIA | 物件點雲輸入的擴散抓取生成器，判別器改用生成器自身輸出訓練；實機整體 81.3% | ICRA 2026 | 69 | [619](https://github.com/NVlabs/GraspGen) |
+| 主流 | 引用、Star | 2021 | [Contact-GraspNet](https://arxiv.org/abs/2103.14127) | NVIDIA / DLR / TUM | 把抓取錨定在點雲接觸點，6-DoF 降為 4-DoF，直接由深度圖生成；結構化雜亂場景成功率超過 90% | ICRA 2021 | 596 | [544](https://github.com/NVlabs/contact_graspnet) |
+| 主流 | 引用 | 2024 | [MoMa-LLM](https://arxiv.org/abs/2403.08605) · [專案頁](http://moma-llm.cs.uni-freiburg.de) | Freiburg / Toyota Motor Europe | 邊探索邊更新開放詞彙場景圖，LLM 在物件中心動作空間上規劃，可開門開櫃做互動式找物 | RA-L 2024 | 144 | [112](https://github.com/robot-learning-freiburg/MoMa-LLM) |
+| 主流 | Star | 2024 | [OK-Robot](https://arxiv.org/abs/2401.12202) · [專案頁](https://ok-robot.github.io) | NYU / AI at Meta | 把現成開放知識模型串成 pick-and-drop 並拆解失敗原因；10 個真實住家 58.5%，整理後 82.4% | RSS 2024 | 53 | [617](https://github.com/ok-robot/ok-robot) |
+| 新興 | 機構 | 2026 | [GraspGen-X](https://arxiv.org/abs/2606.00998) | NVIDIA / Princeton | 以掃掠體積編碼夾爪並條件化擴散模型，對沒看過的夾爪零樣本抓取；實機整體 79.0%，優於 GraspGen 與 AnyGrasp | CVPR 2026 | 12 | [286](https://github.com/NVlabs/GraspGenX) |
+| 新興 | 獲獎 | 2025 | [MomaGraph](https://arxiv.org/abs/2512.16909) · [專案頁](https://HybridRobotics.github.io/MomaGraph/) | UC Berkeley / Maryland / Toronto | 把空間、功能關係與零件層統一進依任務生成的場景圖；benchmark 準確率 71.6%，實機多步任務整體 70% | ICLR 2026 | 13 | [68](https://github.com/HybridRobotics/MomaGraph) |
+| 新興 | 機構 | 2026 | [MoMa-SG](https://arxiv.org/abs/2602.16356) · [專案頁](https://momasg.cs.uni-freiburg.de) | Freiburg / ETH / Bonn | 從 RGB-D 互動序列一次估出轉動與滑動關節，建語意加運動學場景圖；HSR 與 Spot 開關物件成功率皆超過 80%，失敗多為夾取 | CoRL 2026 | 13 | [1](https://github.com/robot-learning-freiburg/MoMa-SG) |
+
+### 最新論文
+
+| 日期 | 論文 | 機構 | 重點 | 數據 | 程式碼 | 來源 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2026-10 | [FOUND-IT++](https://arxiv.org/abs/2610.23622) | MIT SPARK / Samsung Research America | 基礎模型驅動的階層場景圖在 Jetson Thor 上機，只用單目未校正 RGB（VGGT-Ω 建圖、SAM 3 分割）跑完找物、抓取與歸位 | 10 次任務：導航到物件 100%（76/76）、抓取 50%（9/18）、放置 94%（17/18）；抓取失敗歸因於缺主動深度回饋與策略過於簡單 | [GitHub](https://github.com/MIT-SPARK/FOUND-IT) | arXiv |
+| 2026-09 | [REAL](https://arxiv.org/abs/2607.13653) | SJTU / Shanghai AI Lab 等 | 移除模擬器的 oracle 感知 API、只留實體可得的場景先驗，加上模擬使用者，訓練會探索與追問的移動操作 agent | 實機 60 episodes 端到端 78.3%；REAL-Bench 互動任務 56.9% | [GitHub](https://github.com/InternRobotics/REAL) | ECCV 2026 |
+
+更早的 3 篇見 [topics/mobile-manip.md](topics/mobile-manip.md)。
 
 ## SLAM 與定位
 

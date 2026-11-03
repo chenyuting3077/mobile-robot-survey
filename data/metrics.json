@@ -3805,6 +3805,90 @@
    "year": 2026,
    "venue": "The international journal of robotics research",
    "citationCount": 54
+  },
+  "2212.08333": {
+   "title": "AnyGrasp: Robust and Efficient Grasp Perception in Spatial and Temporal Domains",
+   "year": 2022,
+   "venue": "IEEE Transactions on robotics",
+   "citationCount": 561
+  },
+  "2103.14127": {
+   "title": "Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes",
+   "year": 2021,
+   "venue": "IEEE International Conference on Robotics and Automation",
+   "citationCount": 596
+  },
+  "2507.13097": {
+   "title": "GraspGen: A Diffusion-based Framework for 6-DOF Grasping with On-Generator Training",
+   "year": 2025,
+   "venue": "IEEE International Conference on Robotics and Automation",
+   "citationCount": 69
+  },
+  "2606.00998": {
+   "title": "GraspGen-X: Cross-Embodiment 6-DOF Diffusion-based Grasping",
+   "year": 2026,
+   "venue": "Computer Vision and Pattern Recognition",
+   "citationCount": 12
+  },
+  "2306.11565": {
+   "title": "HomeRobot: Open-Vocabulary Mobile Manipulation",
+   "year": 2023,
+   "venue": "Conference on Robot Learning",
+   "citationCount": 174
+  },
+  "2401.12202": {
+   "title": "Demonstrating OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics",
+   "year": 2024,
+   "venue": "Robotics: Science and Systems Conference",
+   "citationCount": 53
+  },
+  "2403.08605": {
+   "title": "Language-Grounded Dynamic Scene Graphs for Interactive Object Search With Mobile Manipulation",
+   "year": 2024,
+   "venue": "IEEE Robotics and Automation Letters",
+   "citationCount": 144
+  },
+  "2602.16356": {
+   "title": "Articulated 3D Scene Graphs for Open-World Mobile Manipulation",
+   "year": 2026,
+   "venue": "arXiv.org",
+   "citationCount": 13
+  },
+  "2512.16909": {
+   "title": "MomaGraph: State-Aware Unified Scene Graphs with Vision-Language Model for Embodied Task Planning",
+   "year": 2025,
+   "venue": "arXiv.org",
+   "citationCount": 13
+  },
+  "2610.23622": {
+   "title": "Foundation-Model-Driven 3D Scene Graphs for Mobile Manipulation",
+   "year": 2026,
+   "venue": "",
+   "citationCount": 0
+  },
+  "2607.13653": {
+   "title": "Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation",
+   "year": 2026,
+   "venue": "European Conference on Computer Vision",
+   "citationCount": 5
+  },
+  "2603.03243": {
+   "title": "HoMMI: Learning Whole-Body Mobile Manipulation from Human Demonstrations",
+   "year": 2026,
+   "venue": "Robotics",
+   "citationCount": 40
+  },
+  "2511.06240": {
+   "title": "Affordance-Guided Coarse-to-Fine Exploration for Base Placement in Open-Vocabulary Mobile Manipulation",
+   "year": 2025,
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "citationCount": 5
+  },
+  "2410.11989": {
+   "title": "Dynamic Open-Vocabulary 3D Scene Graphs for Long-Term Language-Guided Mobile Manipulation",
+   "year": 2024,
+   "venue": "IEEE Robotics and Automation Letters",
+   "citationCount": 77
   }
  },
  "stars": {
@@ -4233,7 +4317,16 @@
   "AutoLab-SAI-SJTU/InfiniteVGGT": 395,
   "Pointcept/Utonia": 771,
   "NTUMARS/Awesome-World-Model-for-Robotics-Policy": 873,
-  "facebookresearch/DepthContrast": 275
+  "facebookresearch/DepthContrast": 275,
+  "graspnet/anygrasp_sdk": 1050,
+  "NVlabs/contact_graspnet": 544,
+  "NVlabs/GraspGen": 619,
+  "NVlabs/GraspGenX": 286,
+  "facebookresearch/home-robot": 1249,
+  "ok-robot/ok-robot": 617,
+  "robot-learning-freiburg/MoMa-LLM": 112,
+  "robot-learning-freiburg/MoMa-SG": 1,
+  "HybridRobotics/MomaGraph": 68
  },
  "hf": {
   "2207.04429": 0,
@@ -4850,7 +4943,21 @@
   "2601.02281": 32,
   "2603.14482": 39,
   "2603.03283": 174,
-  "2605.00080": 16
+  "2605.00080": 16,
+  "2212.08333": null,
+  "2103.14127": 0,
+  "2507.13097": null,
+  "2606.00998": 0,
+  "2306.11565": 17,
+  "2401.12202": 10,
+  "2403.08605": 0,
+  "2602.16356": 0,
+  "2512.16909": 3,
+  "2610.23622": null,
+  "2607.13653": 0,
+  "2603.03243": 0,
+  "2511.06240": null,
+  "2410.11989": null
  },
  "arxiv": {
   "2312.02010": {
@@ -7311,6 +7418,62 @@
   },
   "2605.00080": {
    "comments": "43 pages, 6 figures",
+   "journal_ref": ""
+  },
+  "2212.08333": {
+   "comments": "Paper accepted to T-RO. Project page is at  this https URL",
+   "journal_ref": ""
+  },
+  "2103.14127": {
+   "comments": "ICRA 2021. Video of the real world experiments and code are available at  this https URL",
+   "journal_ref": ""
+  },
+  "2507.13097": {
+   "comments": "",
+   "journal_ref": ""
+  },
+  "2606.00998": {
+   "comments": "",
+   "journal_ref": ""
+  },
+  "2306.11565": {
+   "comments": "37 pages, 22 figures, 8 tables",
+   "journal_ref": ""
+  },
+  "2401.12202": {
+   "comments": "Github repo:  this https URL",
+   "journal_ref": ""
+  },
+  "2403.08605": {
+   "comments": "Project website:  this http URL , accepted at RA-L",
+   "journal_ref": ""
+  },
+  "2602.16356": {
+   "comments": "10th Conference on Robot Learning (CoRL 2026)",
+   "journal_ref": ""
+  },
+  "2512.16909": {
+   "comments": "25 pages, 10 figures. Project page: this https URL",
+   "journal_ref": ""
+  },
+  "2610.23622": {
+   "comments": "",
+   "journal_ref": ""
+  },
+  "2607.13653": {
+   "comments": "Accepted to ECCV 2026. 57 pages. Code available at  this https URL",
+   "journal_ref": ""
+  },
+  "2603.03243": {
+   "comments": "",
+   "journal_ref": ""
+  },
+  "2511.06240": {
+   "comments": "Accepted to AAAI 2026",
+   "journal_ref": ""
+  },
+  "2410.11989": {
+   "comments": "Accepted by IEEE Robotics and Automation Letters (RA-L), 2025",
    "journal_ref": ""
   }
  }

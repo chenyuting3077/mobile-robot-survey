@@ -31,6 +31,8 @@ QUERIES = {
                   '"robot navigation" learning'],
     "semantic-map": ['"3D scene graph"', '"open-vocabulary 3D"', '"semantic mapping"', '"open-vocabulary map"',
                      '"language embedded"', '"open-set" mapping'],
+    "mobile-manip": ['"mobile manipulation"', '"mobile manipulator"', '"6-DoF grasp" point cloud', '"grasp detection" robot',
+                     '"base placement" manipulation', '"open-vocabulary mobile manipulation"'],
     "quadruped": ['quadruped', '"legged robot"', '"legged locomotion"', '"quadrupedal"'],
     "wheel-legged": ['"wheel-legged"', '"wheeled-legged"', '"legged-wheeled"', '"wheeled bipedal"'],
     "slam": ['SLAM', '"visual odometry"', '"lidar odometry"', '"lidar-inertial"', '"visual-inertial"',
@@ -57,6 +59,7 @@ ANCHORS = {
     "vln": ["1711.07280", "2004.02857"],  # R2R、VLN-CE
     "local-nav": ["2306.14846", "2310.07896"],  # ViNT、NoMaD
     "semantic-map": ["2309.16650", "2210.05714"],  # ConceptGraphs、VLMaps
+    "mobile-manip": ["2306.11565", "2401.12202"],  # HomeRobot、OK-Robot
     "quadruped": ["2109.11978", "2201.08117"],  # Learning to Walk in Minutes、Perceptive Locomotion
     "wheel-legged": ["2405.01792"],  # ETH 輪足自主導航與運動
     "slam": ["2107.06829", "2108.10869"],  # FAST-LIO2、DROID-SLAM
