@@ -43,7 +43,7 @@ AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM、Real2Sim�
 - **期刊**：Science Robotics、T-RO、IJRR、RA-L、T-ASE、JFR、TPAMI、IJCV
 - **會議**（接收論文公布時）：RSS、CoRL、ICRA、IROS、CVPR、ICCV、ECCV、3DV、SIGGRAPH、WACV、NeurIPS、ICLR、ICML；EMNLP、ACL（只看 VLN）
 
-最後更新：2026-11-03
+最後更新：2026-11-05
 
 ## 目錄
 
@@ -133,6 +133,8 @@ AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM、Real2Sim�
 
 | 日期 | 論文 | 機構 | 重點 | 數據 | 程式碼 | 來源 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11 | [Caging Legged VLN](https://arxiv.org/abs/2611.04972) | University of Delaware RPNG | 把高層 VLA 規劃器「關在」物理層外：以機載狀態估計與 SDF 把動作轉成軌跡，Bezier 參數化 MPPI 加離散指數屏障函數（dEBF）給出碰撞避免保證，可換不同 VLM／VLA | 人形與四足實機驗證；未見量化數字 | 未公開 | Humanoids 2026 |
+| 2026-11 | [WayTrace](https://arxiv.org/abs/2611.05129) · [專案頁](https://way-trace.github.io) | UC Berkeley、ETH RSL、NVIDIA | 用網路地圖的轉彎導航指令，由現成 VLM 每次下一個原子語言指令（如「向左過馬路」），機載 trace predictor 在影像上畫路徑、RL 策略追蹤，不依賴精準 GNSS | 輪足機器人實機最長 1.37 km、約 1.1 m/s；模擬長程任務違規次數比 point-goal 基線少約 10 倍 | 未公開 | arXiv |
 | 2026-10 | [AVALON](https://arxiv.org/abs/2610.21586) | HKU | 只需平面圖與地點線索，以人給的分層拓撲記憶做節點驗證式導航，不建全域 SLAM 圖；人與機器人共同更新記憶 | Unitree Go2 實機 12.81 m 任務 46.4 s（5/5），比 DimOS-Go2 少 40.9% 時間 | 未公開 | arXiv |
 | 2026-09 | [AgentVLN](https://arxiv.org/abs/2603.17670) | NUAA | 把 VLM 當大腦、感知與規劃拆成技能庫，3D waypoint 投影回影像當視覺提示，可部署在邊緣平台 |  | [GitHub](https://github.com/Allenxinn/AgentVLN) | ECCV 2026 |
 | 2026-09 | [MM-Nav](https://arxiv.org/abs/2510.03142) · [專案頁](https://pku-epic.github.io/MM-Nav-Web/) | PKU / Galbot | 360° 多視角 VLA，向三個分別擅長抵達、穿窄、閃避的 RL 專家學，依各能力表現動態調訓練比例；有實機實驗 |  | 未公開 | ECCV 2026 |
@@ -321,6 +323,7 @@ AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM、Real2Sim�
 
 | 日期 | 論文 | 機構 | 重點 | 數據 | 程式碼 | 來源 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11 | [PadLoc](https://arxiv.org/abs/2611.05172) | HTW Berlin | 免訓練的平面圖定位後端：用主要牆向產生少量位姿候選、以遮罩 NCC 比對自由空間，再用移動位姿高斯混合貝氏濾波，取代稠密 (x,y,θ) 網格，狀態大小不隨軌跡增長 | Bonn LiLocBench 比 UnLoc 的 SR@1m 高 23–32 pp（輪式里程計）；Hilti-Trimble 純相機魚眼 5 條序列中 3 條 online SR@2m 0.90–0.98 | [GitHub](https://github.com/mbookhahn/padloc) | WACV 2027 |
 | 2026-10 | [Line-Augmented cuVSLAM](https://arxiv.org/abs/2610.20958) | Analog Devices、NVIDIA | 在 NVIDIA cuVSLAM 加線特徵（Plücker 參數化、點線殘差進 Gauss-Newton 位姿解與滑窗 BA），點特徵稀少時自動加重線的權重，針對倉庫等低紋理場景 | RGB-D：TUM Freiburg3 22 條序列 ATE 降 38.5%，Replica 8 條降 30.1% | 未公開 | arXiv |
 | 2026-09 | [UniSim-SLAM](https://arxiv.org/abs/2608.01706) · [專案頁](https://vision3d-lab.github.io/unisim-slam/) | UNIST | 前端兩視角追蹤、後端多視角子地圖優化，以統一的 Sim(3) 約束接合不同視角組合的 feed-forward 預測 | 未校正設定下 TUM RGB-D 軌跡誤差降 38.5%、7-Scenes 降 45.9% | [GitHub](https://github.com/vision3d-lab/UniSim-SLAM) | ECCV 2026 |
 | 2026-09 | [Register Any Point](https://arxiv.org/abs/2512.01850) | Bonn / Stanford / RWTH Aachen | 把點雲配準當條件生成：用流場把雜訊點直接送到配準後的場景，不做對應匹配與位姿圖 |  | [GitHub](https://github.com/PRBonn/RAP) | ECCV 2026 |

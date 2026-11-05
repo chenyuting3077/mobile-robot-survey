@@ -12,6 +12,7 @@
 
 | 日期 | 論文 | 機構 | 重點 | 數據 | 程式碼 | 來源 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11 | [PadLoc](https://arxiv.org/abs/2611.05172) | HTW Berlin | 免訓練的平面圖定位後端：用主要牆向產生少量位姿候選、以遮罩 NCC 比對自由空間，再用移動位姿高斯混合貝氏濾波，取代稠密 (x,y,θ) 網格，狀態大小不隨軌跡增長 | Bonn LiLocBench 比 UnLoc 的 SR@1m 高 23–32 pp（輪式里程計）；Hilti-Trimble 純相機魚眼 5 條序列中 3 條 online SR@2m 0.90–0.98 | [GitHub](https://github.com/mbookhahn/padloc) | WACV 2027 |
 | 2026-10 | [Line-Augmented cuVSLAM](https://arxiv.org/abs/2610.20958) | Analog Devices、NVIDIA | 在 NVIDIA cuVSLAM 加線特徵（Plücker 參數化、點線殘差進 Gauss-Newton 位姿解與滑窗 BA），點特徵稀少時自動加重線的權重，針對倉庫等低紋理場景 | RGB-D：TUM Freiburg3 22 條序列 ATE 降 38.5%，Replica 8 條降 30.1% | 未公開 | arXiv |
 | 2026-09 | [UniSim-SLAM](https://arxiv.org/abs/2608.01706) · [專案頁](https://vision3d-lab.github.io/unisim-slam/) | UNIST | 前端兩視角追蹤、後端多視角子地圖優化，以統一的 Sim(3) 約束接合不同視角組合的 feed-forward 預測 | 未校正設定下 TUM RGB-D 軌跡誤差降 38.5%、7-Scenes 降 45.9% | [GitHub](https://github.com/vision3d-lab/UniSim-SLAM) | ECCV 2026 |
 | 2026-09 | [Register Any Point](https://arxiv.org/abs/2512.01850) | Bonn / Stanford / RWTH Aachen | 把點雲配準當條件生成：用流場把雜訊點直接送到配準後的場景，不做對應匹配與位姿圖 |  | [GitHub](https://github.com/PRBonn/RAP) | ECCV 2026 |

@@ -12,6 +12,8 @@
 
 | 日期 | 論文 | 機構 | 重點 | 數據 | 程式碼 | 來源 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11 | [Caging Legged VLN](https://arxiv.org/abs/2611.04972) | University of Delaware RPNG | 把高層 VLA 規劃器「關在」物理層外：以機載狀態估計與 SDF 把動作轉成軌跡，Bezier 參數化 MPPI 加離散指數屏障函數（dEBF）給出碰撞避免保證，可換不同 VLM／VLA | 人形與四足實機驗證；未見量化數字 | 未公開 | Humanoids 2026 |
+| 2026-11 | [WayTrace](https://arxiv.org/abs/2611.05129) · [專案頁](https://way-trace.github.io) | UC Berkeley、ETH RSL、NVIDIA | 用網路地圖的轉彎導航指令，由現成 VLM 每次下一個原子語言指令（如「向左過馬路」），機載 trace predictor 在影像上畫路徑、RL 策略追蹤，不依賴精準 GNSS | 輪足機器人實機最長 1.37 km、約 1.1 m/s；模擬長程任務違規次數比 point-goal 基線少約 10 倍 | 未公開 | arXiv |
 | 2026-10 | [AVALON](https://arxiv.org/abs/2610.21586) | HKU | 只需平面圖與地點線索，以人給的分層拓撲記憶做節點驗證式導航，不建全域 SLAM 圖；人與機器人共同更新記憶 | Unitree Go2 實機 12.81 m 任務 46.4 s（5/5），比 DimOS-Go2 少 40.9% 時間 | 未公開 | arXiv |
 | 2026-09 | [AgentVLN](https://arxiv.org/abs/2603.17670) | NUAA | 把 VLM 當大腦、感知與規劃拆成技能庫，3D waypoint 投影回影像當視覺提示，可部署在邊緣平台 |  | [GitHub](https://github.com/Allenxinn/AgentVLN) | ECCV 2026 |
 | 2026-09 | [MM-Nav](https://arxiv.org/abs/2510.03142) · [專案頁](https://pku-epic.github.io/MM-Nav-Web/) | PKU / Galbot | 360° 多視角 VLA，向三個分別擅長抵達、穿窄、閃避的 RL 專家學，依各能力表現動態調訓練比例；有實機實驗 |  | 未公開 | ECCV 2026 |
