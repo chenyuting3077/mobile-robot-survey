@@ -12,6 +12,11 @@
 
 | 日期 | 論文 | 機構 | 重點 | 數據 | 程式碼 | 來源 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11 | [VisionSIM](https://arxiv.org/abs/2611.08368) | UW–Madison / Portland State / CMU | 模擬感測器的原始物理量測過程，重現 LiDAR pileup、iToF 相位纏繞、事件相機不應期、熱像儀歷史相依等失效模式 | 釋出含同步原始量測與標註的大型室內資料集 | [GitHub](https://github.com/wision-lab/visionsim) | CoRL 2026 |
+| 2026-11 | [RoboSnap](https://arxiv.org/abs/2607.06699) · [專案頁](https://robosnap.github.io) | Shanghai AI Lab / Tsinghua / Zhejiang Univ. / SJTU | 單張 RGB 轉可模擬場景：互動區前景做碰撞感知資產，背景用 3DGS 保留新視角外觀 | DROID 場景軌跡重播可靠；新資料集 DROID-Sim（564 場景）；模擬與實機評估結果相關 | [GitHub](https://github.com/robosnap/robosnap) | CoRL 2026 |
+| 2026-11 | [NavVerse](https://arxiv.org/abs/2607.19695) | Univ. of Michigan / Tsinghua | 室內走到室外的連續導航 benchmark，透過可執行的機器人介面評估成功率、效率與安全 | 200 個場景、10,000 episodes；零樣本下 VLA 成功率最高、模組化方法最安全 | [GitHub](https://github.com/UMich-CURLY/NavVerse-Benchmark) | CoRL 2026 |
+| 2026-11 | [Infinigen-Articulated](https://arxiv.org/abs/2505.10755) | Princeton / McGill / Cisco | 18 類可動物件的程序生成器，含物理參數並可匯出到常見機器人模擬器 | 生成資產可用於可動物件分割、RL 泛化與模仿學習 sim-to-real（作者自報） | [GitHub](https://github.com/princeton-vl/infinigen) | CoRL 2026 |
+| 2026-11 | [Kamino](https://arxiv.org/abs/2603.16536) | Disney Research / NVIDIA | 原生支援運動學閉迴路與異質機體批次模擬的 GPU 剛體求解器，以 ADMM 解非線性互補問題，不近似成運動學樹 | 單 GPU 4,096 個平行環境，訓練含 6 個巢狀閉迴路的雙足行走策略 | [GitHub](https://github.com/newton-physics/newton) | CoRL 2026 |
 | 2026-10 | [GRASE](https://arxiv.org/abs/2610.21498) | 西安交通大學、福州大學、Adobe、西湖大學 | 把影片當持續參照的 agent 流程：渲染結果與影像不符就回頭修正房間結構與物件擺放，而非一次到底 |  | 未公開 | arXiv |
 | 2026-09 | [SPEAR](https://arxiv.org/abs/2607.06701) · [專案頁](https://mikeroberts3000.github.io/papers/spear) | Adobe / Intel Labs / Manycore / NVIDIA | Python 函式庫，可程式化控制任何 Unreal Engine 應用，並提供其他 UE 模擬器沒有的真值影像 | 開放超過 1.4 萬個 UE 函式 | [GitHub](https://github.com/spear-sim/spear) | ECCV 2026 |
 | 2026-09 | [Habitat-GS](https://arxiv.org/abs/2604.12626) · [專案頁](https://zju3dv.github.io/habitat-gs/) | Zhejiang | 擴充 Habitat-Sim，以 3DGS 渲染場景並加入可驅動的高斯人體，用於訓練人感知導航 |  | [GitHub](https://github.com/zju3dv/habitat-gs) | ECCV 2026 |

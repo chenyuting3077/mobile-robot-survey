@@ -11,6 +11,7 @@
 
 | 日期 | 論文 | 機構 | 重點 | 數據 | 程式碼 | 來源 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11 | [OptiGeo](https://arxiv.org/abs/2608.29881) · [專案頁](https://mx-liu6.github.io/OptiGeo-web/) | DiDi / HKU / SUSTech | 把透明、反光區的失敗歸因於真實深度監督的感測器偏差，用乾淨幾何教師與殘差修剪對齊修正，少量透明物渲染資料當乾淨監督 | 30M 參數在透明場景 benchmark 勝過 300M 單目與十億級多視角模型；一般零樣本深度仍具競爭力 | [GitHub](https://github.com/mx-liu6/OptiGeo) | CoRL 2026 |
 | 2026-09 | [ZipDepth](https://arxiv.org/abs/2607.08771) · [專案頁](https://zipdepth.github.io/) | University of Bologna | 可重參數化編解碼器加多領域基礎模型蒸餾，讓輕量單目深度也有 zero-shot 泛化，可上嵌入式裝置 | 6.1M 參數 | [GitHub](https://github.com/fabiotosi92/ZipDepth) | ECCV 2026 |
 | 2026-09 | [WAFT-Stereo](https://arxiv.org/abs/2603.24836) | Princeton | 證明雙目匹配不一定要 cost volume，只用 warping 就能達到領先表現 | ETH3D zero-shot 誤差降 81%；比競品快 1.8–6.7 倍 | [GitHub](https://github.com/princeton-vl/WAFT-Stereo) | ECCV 2026 |
 | 2026-09 | [MetricAnything](https://arxiv.org/abs/2601.22054) · [專案頁](https://metric-anything.github.io/metric-anything-io/) | Li Auto | 隨機遮罩深度圖形成稀疏度量提示，讓模型能從雜訊大、來源不一的 3D 資料學度量深度 |  | [GitHub](https://github.com/metric-anything/metric-anything) | ECCV 2026 |
