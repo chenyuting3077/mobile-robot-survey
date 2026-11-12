@@ -29,8 +29,8 @@ slam,2510.04612,OKVIS2-X,TUM,T-RO 2025,ethz-mrl/OKVIS2-X,,,,,可選配稠密深�
 slam,2507.03737,S3PO-GS,HKUST (GZ),ICCV 2025,3DAgentWorld/S3PO-GS,https://3dagentworld.github.io/S3PO-GS/,,,,以 3DGS 點圖錨定追蹤避免尺度漂移的戶外單目 SLAM,NeRF／3DGS 稠密 SLAM,超過主題上限
 slam,2502.15633,OpenGS-SLAM (outdoor),HKUST (GZ),ICRA 2025,3DAgentWorld/OpenGS-SLAM,https://3dagentworld.github.io/opengs-slam/,,,,點圖回歸加自適應尺度的戶外純 RGB Gaussian SLAM,NeRF／3DGS 稠密 SLAM,超過主題上限
 slam,2503.05077,Adaptive-LIO,未確認,IoT-J 2025,chengwei0427/Adaptive-LIO,,,,,依環境自適應分段與地圖解析度的 LiDAR 慣性里程計,LiDAR、雷達與多感測器融合,超過主題上限
-perception-3d,2110.15367,Neural Disparity Refinement,Bologna,3DV 2021,CVLAB-Unibo/neural-disparity-refinement,https://cvlab-unibo.github.io/neural-disparity-refinement-web,,獲獎,oral,連續式視差精修網路，可輸出任意解析度，適合手機上高低解析度不對稱的雙目,,新興滿兩年未達門檻
-perception-3d,2101.04777,Binary TTC,NVIDIA / UCSB,CVPR 2021,,,,獲獎,入圍：Best Student Paper Honorable Mention,把碰撞時間估計改成逐像素二元分類（是否在時限內碰撞），單目、免校正即可當時間柵欄,,新興滿兩年未達門檻
+perception-3d,2110.15367,Neural Disparity Refinement,Bologna,3DV 2021,CVLAB-Unibo/neural-disparity-refinement,https://cvlab-unibo.github.io/neural-disparity-refinement-web,,,,連續式視差精修網路，可輸出任意解析度，適合手機上高低解析度不對稱的雙目,,新興滿兩年未達門檻
+perception-3d,2101.04777,Binary TTC,NVIDIA / UCSB,CVPR 2021,,,,獲獎,得獎：Best Student Paper Honorable Mention,把碰撞時間估計改成逐像素二元分類（是否在時限內碰撞），單目、免校正即可當時間柵欄,,新興滿兩年未達門檻
 reconstruction,2503.07353,Anisotropic Rotation Averaging,Lund / Chalmers,ICCV 2025,ylochman/anisotropic-ra,,,獲獎,oral,把量測的各向異性不確定性放進旋轉平均，並給出可驗證全域最優的鬆弛解,SfM 與相機位姿,超過主題上限
 reconstruction,2505.04612,FastMap,TTIC / Toyota Research Institute,3DV 2026,pals-ttic/fastmap,https://jiahao.ai/fastmap,,獲獎,入圍：Best Paper,只用一階最佳化的全域 SfM，GPU 上比 COLMAP、GLOMAP 快約 10 倍、位姿精度相當,SfM 與相機位姿,超過主題上限
 reconstruction,2112.03424,Learning to Solve Hard Minimal Problems,Georgia Tech / CTU Prague,CVPR 2022,petrhruby97/learning_minimal,,,獲獎,得獎：Best Paper,學習挑選起始問題解對做同倫延拓，只算出需要的那個解，大幅加速難的最小問題求解,SfM 與相機位姿,超過主題上限
@@ -53,7 +53,7 @@ slam,DOI:10.1109/IROS55552.2023.10341898,Cross-View Place Recognition,University
 quadruped,DOI:10.1109/IROS55552.2023.10342061,Multi-IMU Proprioceptive Odometry,CMU,IROS 2023,ShuoYangRobotics/Multi-IMU-Proprioceptive-Odometry,,,獲獎,"入圍：Best Paper on Safety, Security, and Rescue Robotics",在每條小腿加裝 IMU，以 EKF 融合做低漂移的腿式本體感覺里程計,,新興滿兩年未達門檻
 slam,DOI:10.1109/LRA.2021.3057572,Interval-Based Visual-LiDAR Fusion,Leibniz University Hannover,RA-L 2021,,,,獲獎,得獎：ICRA 2021 Best Paper in Robot Vision,以區間分析保守建模 LiDAR 距離指派給影像特徵的不確定性,LiDAR、雷達與多感測器融合,新興滿兩年未達門檻
 slam,DOI:10.1109/ICRA46639.2022.9812133,EDPLVO,Meituan / UNC / CMU,ICRA 2022,,,,獲獎,得獎：Outstanding Navigation Paper,把共線約束有效納入直接法，點線並用的高效直接視覺里程計,視覺與慣性里程計、SLAM,新興滿兩年未達門檻
-slam,DOI:10.1109/ICRA48891.2023.10161538,iMODE,Imperial,ICRA 2023,,,,獲獎,得獎：Outstanding Navigation Paper,以稀疏 SLAM 位姿與深度監督，即時從頭訓練單目稠密語意神經場,NeRF／3DGS 稠密 SLAM,新興滿兩年未達門檻
+slam,DOI:10.1109/ICRA48891.2023.10161538,iMODE,Imperial,ICRA 2023,,,,獲獎,入圍：Outstanding Navigation Paper,以稀疏 SLAM 位姿與深度監督，即時從頭訓練單目稠密語意神經場,NeRF／3DGS 稠密 SLAM,新興滿兩年未達門檻
 slam,DOI:10.1109/ICRA57147.2024.10611697,Censible,Caltech / JPL,ICRA 2024,,,,獲獎,入圍：Best Conference Paper,行星車全域定位框架，取代人工比對軌道影像,地點辨識與重定位,新興滿兩年未達門檻
 slam,DOI:10.1109/ICRA57147.2024.10610916,Square-Root Filter VINS,University of Delaware,ICRA 2024,,,,獲獎,入圍：Best Paper in Robot Vision,改用平方根共變異數濾波，在嵌入式裝置上更快且數值更穩,視覺與慣性里程計、SLAM,新興滿兩年未達門檻
 slam,2103.05465,PointDSC,HKUST / CityU,CVPR 2021,XuyangBai/PointDSC,,,,,把空間一致性做成可學習的離群點剔除，提升特徵式點雲配準的穩健度,點雲配準,超過主題上限
@@ -64,7 +64,7 @@ quadruped,2208.01160,Quadruped Soccer Shooting,UC Berkeley / Mila,IROS 2022,,,,�
 quadruped,2409.17731,Quadruped Ladder Climbing,ETH RSL,IROS 2025,,https://sites.google.com/leggedrobotics.com/climbingladders,,獲獎,入圍：Award Finalist,特製鉤爪加上 RL 策略，四足實機可靠爬工業爬梯,,新興滿兩年未達門檻
 quadruped,2110.02799,Mini Cheetah Optimal Landing,MIT / UMass Amherst,ICRA 2022,,,,獲獎,入圍：Outstanding Dynamics and Control Paper,不預設接觸序列，即時最佳化落地姿勢與反作用力，從各種墜落狀態恢復,,新興滿兩年未達門檻
 quadruped,2211.06917,Distributed DDPC Collaborative Legged,Virginia Tech / Caltech,ICRA 2023,,,,獲獎,得獎：Outstanding Paper,以行為系統理論建模多台互相拘束的四足，分散式資料驅動預測控制協同行走,,新興滿兩年未達門檻
-quadruped,2209.07503,Motion Primitive Graph,Caltech,ICRA 2023,,,,獲獎,得獎：Outstanding Student Paper；得獎：Outstanding Locomotion Paper,在動作基元圖上規劃，依擾動即時切換步態基元，提升腿式機器人穩健性,,新興滿兩年未達門檻
+quadruped,2209.07503,Motion Primitive Graph,Caltech,ICRA 2023,,,,獲獎,得獎：Outstanding Student Paper；入圍：Outstanding Locomotion Paper,在動作基元圖上規劃，依擾動即時切換步態基元，提升腿式機器人穩健性,,新興滿兩年未達門檻
 quadruped,2310.03581,Resilient Legged Local Navigation,ETH RSL,ICRA 2024,,,,獲獎,入圍：Best Paper in Cognitive Robotics,把感知失效建模成看不見的障礙與坑洞，RL 局部導航策略學會靠本體感覺應變,,新興滿兩年未達門檻
 quadruped,2403.00187,Confined-Space Legged Locomotion,ETH RSL,ICRA 2024,,,,獲獎,得獎：Best Paper in Service Robotics,以 3D 體素表示輸入 RL 策略，四足能調整姿態鑽過狹窄空間,,新興滿兩年未達門檻
 quadruped,2410.00572,Leader Following Quadruped,ETH RSL,ICRA 2025,,,,獲獎,入圍：Best Conference Paper,四足以視覺追蹤領隊者並同時避障，免手動遙控跟隨,,新興滿兩年未達門檻
@@ -98,13 +98,13 @@ vln,2403.14158,VER,Zhejiang,CVPR 2024,DefaultRui/VLN-VER,,,,,多視角 2D 特徵
 vln,2507.04047,MTU3D,Tsinghua / BIGAI / BIT 等,ICCV 2025,MTU3D/MTU3D,https://mtu3d.github.io,,,,3D 視覺定位與主動探索合一，支援多種目標模態,,超過主題上限
 vln,2506.17221,VLN-R1,Shanghai AI Lab / HKU,arXiv,Qi-Zhangyang/GPT4Scene-and-VLN-R1,https://vlnr1.github.io,,,,LVLM 以 GRPO 強化微調直接輸出連續導航動作,,超過主題上限
 vln,2504.14478,ApexNav,HKUST(GZ) / SUSTech,RA-L 2025,SYSU-STAR/ApexNav,https://robotics-star.com/ApexNav,,,,依語意線索強弱切換探索策略，目標中心融合抗誤檢,,超過主題上限
-vln,2503.02247,WMNav,CASIA / Wuhan Univ. / UTS,IROS 2025,B0B8K1ng/WMNavigation,https://b0b8k1ng.github.io/WMNav/,,獲獎,oral,VLM 當世界模型預測決策結果並回饋策略,,超過主題上限
+vln,2503.02247,WMNav,CASIA / Wuhan Univ. / UTS,IROS 2025,B0B8K1ng/WMNavigation,https://b0b8k1ng.github.io/WMNav/,,,,VLM 當世界模型預測決策結果並回饋策略,,超過主題上限
 vln,2509.25687,OmniNav,Alibaba / PKU,ICLR 2026,amap-cvlab/OmniNav,https://astra-amap.github.io/omninav.github.io/,,,,單一架構統一指令、物件、點目標導航與探索,,超過主題上限
 vln,2507.13019,VLN-PE,Tongji / Shanghai AI Lab / SJTU,ICCV 2025,,https://crystalsixone.github.io/vln_pe.github.io/,,,,支援人形、四足、輪式的物理真實 VLN 平台與評測,,超過主題上限
 vln,2506.09839,OctoNav,Beihang / NUS / PKU 等,CVPR 2026,buaa-colalab/OctoNav-R1,https://buaa-colalab.github.io/OctoNav,,,,多模態多能力自由指令基準，加先思考再行動的 R1 模型,,超過主題上限
 vln,2505.11383,Dynam3D,NUS,NeurIPS 2025,MrZihan/Dynam3D,,,獲獎,oral,動態分層 3D token 當 VLM 輸入，隨環境更新,,超過主題上限
 slam,2210.13641,NeRF-SLAM,MIT SPARK,IROS 2023,ToniRV/NeRF-SLAM,,,,,稠密單目 SLAM 提供位姿與深度不確定度即時訓練 NeRF,NeRF／3DGS 稠密 SLAM,超過主題上限
-slam,2302.03594,NICER-SLAM,ETH / MPI-IS / Lund 等,3DV 2024,cvg/nicer-slam,https://nicer-slam.github.io,,獲獎,得獎：Best Paper Honorable Mention,僅用 RGB 並以單目先驗監督的神經隱式稠密 SLAM,NeRF／3DGS 稠密 SLAM,超過主題上限
+slam,2302.03594,NICER-SLAM,ETH / MPI-IS / Lund 等,3DV 2024,cvg/nicer-slam,https://nicer-slam.github.io,,,,僅用 RGB 並以單目先驗監督的神經隱式稠密 SLAM,NeRF／3DGS 稠密 SLAM,超過主題上限
 slam,2309.02436,GO-SLAM,Bologna,ICCV 2023,youmi-zym/GO-SLAM,https://youmi-zym.github.io/projects/GO-SLAM/,,,,迴環與全域 BA 即時更新神經重建的稠密 SLAM,NeRF／3DGS 稠密 SLAM,超過主題上限
 slam,2301.06230,Swarm-SLAM,Polytechnique Montréal,RA-L 2024,MISTLab/Swarm-SLAM,https://lajoiepy.github.io/cslam_documentation/html/index.html,,,,稀疏去中心化的多機器人協作 SLAM,多機器人與長期地圖,超過主題上限
 slam,2403.12550,GS-ICP SLAM,SKKU,ECCV 2024,Lab-of-AI-and-Robotics/GS_ICP_SLAM,,,,,G-ICP 與 3DGS 共用 Gaussian 地圖的高速 SLAM,NeRF／3DGS 稠密 SLAM,超過主題上限
@@ -133,7 +133,7 @@ reconstruction,2501.14914,Light3R-SfM,NVIDIA / Vector Institute / Univ. of Toron
 reconstruction,2412.12507,3DGUT,NVIDIA / Univ. of Toronto,CVPR 2025,nv-tlabs/3dgrut,https://research.nvidia.com/labs/toronto-ai/3DGUT,,,,以無跡變換投影高斯，支援畸變相機與二次光線,3DGS／NeRF 表示與渲染,超過主題上限
 reconstruction,2407.07090,3DGRT,NVIDIA / Univ. of Toronto,SIGGRAPH Asia 2024,nv-tlabs/3dgrut,https://gaussiantracer.github.io/,,,,以 GPU 光線追蹤取代光柵化渲染 3D 高斯粒子,3DGS／NeRF 表示與渲染,超過主題上限
 reconstruction,2412.09401,SLAM3R,PKU / HKU / Aalto 等,CVPR 2025,PKU-VCL-3DV/SLAM3R,,,,,前饋點圖回歸逐窗重建的即時單目稠密重建,feed-forward 重建,超過主題上限
-reconstruction,2505.00702,RayZer,UT Austin / Adobe / Cornell 等,ICCV 2025,,https://hwjiang1510.github.io/RayZer/,,獲獎,得獎：Best Paper Honorable Mention,完全不用位姿或 3D 標註，自我預測相機後渲染新視角做自監督，訓練出大型視角合成模型,3DGS／NeRF 表示與渲染,超過主題上限
+reconstruction,2505.00702,RayZer,UT Austin / Adobe / Cornell 等,ICCV 2025,,https://hwjiang1510.github.io/RayZer/,,獲獎,得獎：Honorable Mention,完全不用位姿或 3D 標註，自我預測相機後渲染新視角做自監督，訓練出大型視角合成模型,3DGS／NeRF 表示與渲染,超過主題上限
 reconstruction,2301.04545,AdaPoinTr,Tsinghua,TPAMI 2023,yuxumin/PoinTr,,,,,PoinTr 加自適應查詢與去噪任務，補全更快更準，並延伸到場景級補全,表面、TSDF 與點雲補全,超過主題上限
 reconstruction,2108.04444,SnowflakeNet,Tsinghua / JD.com 等,ICCV 2021,,,,,,以雪花式點反卷積逐步分裂點，skip-transformer 保留局部結構，補全細節更清楚,表面、TSDF 與點雲補全,超過主題上限
 reconstruction,2106.03452,Shape As Points,MPI-IS / ETH / Tübingen 等,NeurIPS 2021,autonomousvision/shape_as_points,https://pengsongyou.github.io/sap,,,,可微分 Poisson 求解器把點雲轉成隱式表面，比神經隱式表示快且可端到端最佳化,表面、TSDF 與點雲補全,超過主題上限

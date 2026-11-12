@@ -42,7 +42,7 @@
 | 主流 | 引用、獲獎 | 2023 | [DTC](https://arxiv.org/abs/2309.15462) | ETH | RL 策略追蹤軌跡最佳化參考，兼顧精準與強健 | Science Robotics 2024 | 205 | 未公開 |
 | 主流 | 引用 | 2025 | [TRG-planner](https://arxiv.org/abs/2501.01806) · [專案頁](https://trg-planner.github.io/) | KAIST | 以穿越風險圖兼顧地形安全與距離的路徑規劃 | RA-L 2025 | 37 | [31](https://github.com/wasahaiah/TRG-planner) |
 | 主流 | 引用、獲獎 | 2025 | [LocoFormer](https://arxiv.org/abs/2509.23745) | Skild AI | 在程序生成的大量機體上做長上下文 RL，測試時靠歷史自行適應未見過的腿式與輪式機體 | CoRL 2025<br>入圍 Best Paper | 38 | 未公開 |
-| 主流 | 引用、獲獎 | 2022 | [Legged Locomotion with Egocentric Vision](https://arxiv.org/abs/2211.07638) · [專案頁](https://vision-locomotion.github.io) | CMU / Berkeley | 直接用深度影像端到端學運動，不建高度圖 | CoRL 2022<br>入圍 Best Systems Paper | 371 | 未公開 |
+| 主流 | 引用、獲獎 | 2022 | [Legged Locomotion with Egocentric Vision](https://arxiv.org/abs/2211.07638) · [專案頁](https://vision-locomotion.github.io) | CMU / Berkeley | 直接用深度影像端到端學運動，不建高度圖 | CoRL 2022<br>🏆 Best Systems Paper | 371 | 未公開 |
 | 主流 | 引用 | 2024 | [PIE](https://arxiv.org/abs/2408.13740) | Zhejiang | 單階段隱式＋顯式雙層估計的端到端跑酷策略 | RA-L 2024 | 93 | 未公開 |
 | 主流 | 引用、獲獎 | 2023 | [Legged Planetary Exploration Team](https://arxiv.org/abs/2307.10079) | ETH | 多隻技能互補的四足機器人團隊探勘行星類比地形 | Science Robotics 2023 | 168 | 未公開 |
 | 主流 | 引用、獲獎 | 2022 | [Legged Optimization Control Survey](https://arxiv.org/abs/2211.11644) | Notre Dame / UPenn / LAAS-CNRS 等 | 回顧足式機器人模型式最佳化控制的綜述 | T-RO 2024 | 322 | 未公開 |
