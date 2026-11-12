@@ -12,6 +12,9 @@
 
 | 日期 | 論文 | 機構 | 重點 | 數據 | 程式碼 | 來源 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11 | [Compass 1](https://arxiv.org/abs/2611.12087) · [專案頁](https://www.archon.tech/research/compass1) | Archon | 導航基礎模型同時做語言理解與影片生成，用稀疏關鍵幀加顯式歷史地圖保存約 2 分鐘視覺記憶，再用三類結構化 VQA 監督訓練回溯；只用單目 RGB 影片，跨輪式、四足、人形、無人機 | 開放世界評測整體成功率 79.4%（最強基線 17.8%）；歷史回溯 0%→58%；釋出 500+ 小時實機互動與 2,000+ 小時標註網路影片 | 未公開 | arXiv |
+| 2026-11 | [CPNav](https://arxiv.org/abs/2611.10366) | UCLA | 以 conformal prediction 離線校準 VLM 的動作評分，附有限樣本保證；搭配無碰撞運動基元與帶回溯的樹狀探索，無地圖物件導航，校準層可套在任何 VLM 策略 | HM3D v0.2 SR／SPL 相對未校準基線 +6.2%／+11.4%，MP3D +12.4%／+8.8%；實機（Hiwonder MentorPi）+24.9%／+15.2% | [GitHub](https://github.com/practice-lab-ucla/CPnav) | arXiv |
+| 2026-11 | [CSG-Nav](https://arxiv.org/abs/2611.11978) · [專案頁](https://xr-ui.github.io/CSGNav.github.io/) | 廣東省人工智慧與數字經濟實驗室（深圳）、深圳大學 | 零樣本物件導航，融合開放詞彙偵測信心、以高斯衰減壓低遠距觀測權重，並用深度 3D 定位做幾何確認才停止，降低 VLM 幻覺造成的方向偏差 | HM3Dv1／HM3Dv2／MP3D 成功率 58.9%／71.6%／44.3%；室內外實機部署 | 未公開 | Information Fusion 2026 |
 | 2026-11 | [Caging Legged VLN](https://arxiv.org/abs/2611.04972) | University of Delaware RPNG | 把高層 VLA 規劃器「關在」物理層外：以機載狀態估計與 SDF 把動作轉成軌跡，Bezier 參數化 MPPI 加離散指數屏障函數（dEBF）給出碰撞避免保證，可換不同 VLM／VLA | 人形與四足實機驗證；未見量化數字 | 未公開 | Humanoids 2026 |
 | 2026-11 | [WayTrace](https://arxiv.org/abs/2611.05129) · [專案頁](https://way-trace.github.io) | UC Berkeley、ETH RSL、NVIDIA | 用網路地圖的轉彎導航指令，由現成 VLM 每次下一個原子語言指令（如「向左過馬路」），機載 trace predictor 在影像上畫路徑、RL 策略追蹤，不依賴精準 GNSS | 輪足機器人實機最長 1.37 km、約 1.1 m/s；模擬長程任務違規次數比 point-goal 基線少約 10 倍 | 未公開 | arXiv |
 | 2026-10 | [AVALON](https://arxiv.org/abs/2610.21586) | HKU | 只需平面圖與地點線索，以人給的分層拓撲記憶做節點驗證式導航，不建全域 SLAM 圖；人與機器人共同更新記憶 | Unitree Go2 實機 12.81 m 任務 46.4 s（5/5），比 DimOS-Go2 少 40.9% 時間 | 未公開 | arXiv |
