@@ -12,6 +12,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TAGS = {"獲獎", "基準", "機構", "推薦", "知名"}
+# 得獎含 honorable mention；入圍含 finalist、award candidate；只有 oral 沒有獎項的寫 oral
+AWARD = re.compile(r"(得獎|入圍)：\S.*|oral")
 SUBS = {
     "slam": ["視覺與慣性里程計、SLAM", "LiDAR、雷達與多感測器融合", "NeRF／3DGS 稠密 SLAM", "地點辨識與重定位",
              "點雲配準", "多機器人與長期地圖", "資料集、綜述與工具"],
@@ -105,9 +107,29 @@ def check_classics(topics, in_topics, errors):
             errors.append(f"{where}：tags 只能用 {'、'.join(sorted(TAGS))}，不能用 {'、'.join(sorted(bad))}")
         if "機構" in r["tags"].split(";") and not r["repo"]:
             errors.append(f"{where}：tag「機構」要求開源，但 repo 空白")
-    for r in csv.DictReader((ROOT / "data" / "archive.csv").open()):
+        check_award(r, where, errors)
+    for n, r in enumerate(csv.DictReader((ROOT / "data" / "archive.csv").open()), 2):
         if r["id"] and r["id"] in ids:
             errors.append(f"archive.csv（{r['name']}）：id 同時在 classics.csv，移回時要從 archive.csv 刪除")
+        check_award(r, f"archive.csv 第 {n} 行（{r['name']}）", errors)
+
+
+def check_award(r, where, errors):
+    for part in filter(None, r["award"].split("；")):
+        if not AWARD.fullmatch(part):
+            errors.append(f"{where}：award「{part}」應為「得獎：獎項」「入圍：獎項」或「oral」，多個用「；」分隔")
+    if r["award"] and "獲獎" not in r["tags"].split(";"):
+        errors.append(f"{where}：有 award 但 tags 沒有「獲獎」")
+
+
+def award_warnings() -> list[str]:
+    """標了獲獎卻沒寫是哪個獎；官網失效、查不到的先留空，所以只警告。"""
+    out = []
+    for name in ("classics", "archive"):
+        for r in csv.DictReader((ROOT / "data" / f"{name}.csv").open()):
+            if "獲獎" in r["tags"].split(";") and not r["award"]:
+                out.append(f"{r['name']}（{name}.csv，{r['venue']}）")
+    return out
 
 
 def all_papers() -> list[dict]:
@@ -163,5 +185,7 @@ if __name__ == "__main__":
     errs = check(TOPICS)
     if warns := venue_warnings():
         print("刊登處待確認（查 arXiv journal_ref、專案頁或論文集後改 venue）：\n" + "\n".join(warns) + "\n")
+    if warns := award_warnings():
+        print("標了獲獎但 award 空白（查官網獎項頁後補）：\n" + "\n".join(warns) + "\n")
     print("\n".join(errs) or "OK")
     sys.exit(1 if errs else 0)
