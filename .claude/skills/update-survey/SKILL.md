@@ -37,6 +37,7 @@ description: 更新這個論文整理 repo 時使用：定期（每週一、四�
   - `id`：arXiv 編號，沒有就寫 `DOI:...`；都沒有（部落格、技術報告）留空並填 `url`。
   - `repo` 只填官方 repo（`owner/name`），沒有留空；`project` 填專案頁，沒有留空。
   - `sub`：slam、reconstruction 必填子分類，可用值在 `scripts/check_data.py` 的 `SUBS`；其他主題留空。
+  - `award`：標 `獲獎` 的要寫是哪個獎，`得獎：Best Paper`、`入圍：Best Systems Paper` 或 `oral`，多個用「；」分隔；得獎含 honorable mention，入圍含 finalist、award candidate。獎項與 venue 不同場合（RA-L 論文在 ICRA 得獎）時寫上會議，例如 `得獎：ICRA 2021 Best Student Paper`。查不到的留空，`check_data.py` 會列出。
   - `tags` 是人工判斷的收錄理由：`獲獎`、`基準`、`機構`、`推薦`、`知名`（代表性方法，不封存也不佔上限，使用者指定或封存時發現才加）。「引用」「Star」「HF」由腳本依數據判斷；Science Robotics、T-RO 自動算「獲獎」。
 - 刊登處（`venue` 與「來源」欄）以 arXiv 的 Comments／journal_ref、專案頁、會議論文集為準，查不到就寫 `arXiv`，不憑記憶填。格式：會議或期刊縮寫加年份（`RSS 2026`、`RA-L 2026`）；只有預印本寫 `arXiv`；企業發表寫網站（`NVIDIA Research`），同時有 arXiv 就用頓號並列。會議、期刊名不寫進「重點」。年份以期刊卷號或論文集為準，不用 Semantic Scholar 的 arXiv 年份。
 

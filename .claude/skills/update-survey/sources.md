@@ -42,16 +42,16 @@
 
 ## 得獎名單（擴充重要論文時查）
 
-查 CVPR、ICCV、ECCV、3DV、ICRA、IROS、CoRL、RSS 的最佳論文（含入圍、honorable mention、各類別獎），符合範圍的收進 `classics.csv` 並標 `獲獎`。2021–2026 已全面查過一次（2026-10），之後每年各會議公布後補當年度。
+查 CVPR、ICCV、ECCV、3DV、ICRA、IROS、CoRL、RSS 的最佳論文（含入圍、honorable mention、各類別獎），符合範圍的收進 `classics.csv` 並標 `獲獎`，`award` 寫明得獎或入圍與獎項名。2021–2026 已全面查過一次（2026-10），2026-11 逐篇補上 `award`；之後每年各會議公布後補當年度，只列入圍的會議（ICRA、IROS 2026）在得獎者公布後把「入圍」改成「得獎」。
 
 | 會議 | 來源 | 坑 |
 |---|---|---|
-| CVPR | `cvpr.thecvf.com/Conferences/<年>/News/...`、候選 `cvpr.thecvf.com/virtual/<年>/events/AwardCandidates<年>` | 2022 finalists、2024 candidates 沒有官方清單；IEEE TCPAMI 獎項頁有年份與獎項標錯，別當來源 |
-| ICCV / ECCV | `iccv<年>.thecvf.com`、`eccv<年>.ecva.net/virtual/<年>/awards_detail` | ICCV 候選名單多半不公開，只能從 ICCV Daily（rsipvision.com）零星找到 |
-| 3DV | `3dvconf.github.io/<年>/awards/` 與同目錄 `award_candidates.csv` | 2021、2024 官網沒有得獎頁，只能靠大學新聞；2023 停辦 |
-| ICRA | `<年>.ieee-icra.org/awards/`；2021 只有 RAS 獎項手冊 PDF；2022、2023 用 Robohub 轉載 | 官網常只列入圍，得獎者要等會後 |
-| IROS | `<年>.ieee-iros.org/program/awards/`；2023 用 AIhub 轉載 | curl 直接抓官網會 403，改用 WebFetch；2021 網域已失效、2024 官網與 PaperCept 都擋；2025 只列入圍、不分獎項 |
-| CoRL / RSS | `<年>.corl.org/program/awards`、`roboticsconference.org/<年>/program/awards/` | CoRL 2022 網域已轉走；RSS 2023、2024 官網只列入圍 |
+| CVPR | `cvpr.thecvf.com/Conferences/<年>/News/...`、候選 `cvpr.thecvf.com/virtual/<年>/events/AwardCandidates<年>`；2021 用 Wayback 的 `cvpr2021.thecvf.com/node/290`（候選）與 `node/329`（得獎）；2022 用 Wayback 的 `cvpr2022.thecvf.com/node/460` | 2022 finalists、2024 candidates 沒有官方清單；IEEE TCPAMI 獎項頁有年份與獎項標錯，別當來源；`virtual/<年>/awards_detail` 列的是 highlight，看不出獎項；CVPR 2022 以前的 oral 名單找不到官網 |
+| ICCV / ECCV | `iccv2021.thecvf.com/node/206`、`eccv.ecva.net/virtual/<年>/awards_detail`；oral 看 `iccv.thecvf.com/virtual/<年>/oral/<id>` | ICCV 2023、2025 官網找不到獎項頁，暫以頒獎單位 TCPAMI 的 `tc.computer.org/tcpami/awards/iccv-paper-awards/` 為準，類別有衝突時只寫 Honorable Mention；ICCV 候選名單多半不公開 |
+| 3DV | `3dvconf.github.io/<年>/awards/` 與同目錄 `award_candidates.csv` | 2021、2024 官網（含 Wayback）沒有得獎頁，只有作者或大學頁面的不標；2023 停辦 |
+| ICRA | `<年>.ieee-icra.org/program/awards/`；2021 只有 RAS 獎項手冊 PDF（`ieee-ras.org/images/2021_ICRA_Awards_Brochure_v3.pdf`）；2022 用 Wayback 的 `icra2022.org/program/awards`，2023 用 Wayback 的 `www.icra2023.org/awards-finalists` | 官網常只列入圍，得獎者要等會後；2021 手冊 PDF 文字是 `(cid:N)` 編碼，字元 = chr(N+29)，且兩欄排版，入圍名單的類別要對前後文；ICRA 2022 官網的 `(WINNER)` 標在得獎論文之後；Robohub 的 ICRA 2023 轉載把兩篇入圍誤標成得獎（iMODE、Motion Primitive Graph 的 Locomotion 獎），別用 |
+| IROS | `<年>.ieee-iros.org/program/awards/`；2022 用 `iros2022.org/2022/10/30/award-winners/`；2021 用 Wayback 的 `iros2021.org/awards`；2023 用 Wayback 的 `ieee-iros.org/iros-2023-award-winners/` | curl 直接抓官網會 403，改用 WebFetch；2024 官網與 PaperCept 都擋；2025 官網憑證錯誤，入圍名單在 PaperCept 議程 `IROS25_ContentListWeb_<1-3>.html` 的「Award Finalists N」場次，不分獎項；2026 官網只列入圍，得獎者只有二手報導 |
+| CoRL / RSS | `<年>.corl.org/program/awards`、`roboticsconference.org/<年>/program/awards/` | CoRL 2022、2023 用 Wayback 的 `corl2022.org/awards/`、`www.corl2023.org/awards`（oral 看同站 `/papers`）；CoRL 2021 官網與存檔都沒有，只有 Robohub 轉載的 CoRL 官方帳號推文；CoRL 2025 起是 Google Sites，名單在跳脫兩次的內嵌 HTML 裡，要 `html.unescape` 兩次再解析；RSS 2023、2024 官網只列入圍 |
 
-- 得獎與否以官網為準；只有二手報導（新聞、X、實驗室網站）的寫成入圍，不寫得獎。
+- 得獎、入圍、oral 一律以官網為準；官網失效先查 Wayback 存檔（`archive.org/wayback/available?url=...`）。只有二手報導（新聞、X、作者專案頁、arXiv 備註、實驗室網站）的不標；官網只列入圍、得獎者只有二手報導的標入圍。2026-11 依此移除 7 篇只有作者自述的 `獲獎`（Semantic-NeRF、GMFlow、DUET、ScaleVLN、WMNav、NICER-SLAM、Neural Disparity Refinement）。
 - 純操作、純人形、純自駕、無人機、純渲染品質改進的不收，即使得獎。

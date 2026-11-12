@@ -44,7 +44,7 @@ AMR、四足、輪足機器人的導航、視覺、3D 感知、SLAM、Real2Sim�
 | 引用 | 引用數達年份門檻：2021–22 年 ≥ 300、2023 年 ≥ 150、2024 年 ≥ 80、2025 年 ≥ 30（Semantic Scholar） |
 | Star | 官方 repo star ≥ 500 |
 | HF | Hugging Face Papers 按讚數 ≥ 20 |
-| 獲獎 | 頂會最佳論文（含入圍）或 oral，或刊在 Science Robotics、T-RO |
+| 獲獎 | 頂會最佳論文（含入圍）或 oral，或刊在 Science Robotics、T-RO；「來源」欄標 🏆（得獎，含 honorable mention）、入圍（finalist、award candidate）或 oral |
 | 基準 | 提出被廣泛採用的 benchmark、資料集，或常被當比較基準的方法 |
 | 機構 | [定期追蹤的來源](#定期追蹤的來源)的企業與[實驗室主要名單](docs/labs.md#主要名單)內機構發表，且有實機實驗與開源 |
 | 推薦 | 人工推薦 |
@@ -148,6 +148,14 @@ def ranked_stars(r, stars: int) -> int:
     return min(stars, STAR_BAR) if r["repo"] in SHARED_REPOS else stars
 
 
+def award_text(award: str) -> str:
+    out = []
+    for part in filter(None, award.split("；")):
+        kind, _, name = part.partition("：")
+        out.append({"得獎": f"🏆 {name}", "入圍": f"入圍 {name}"}.get(kind, part))
+    return "".join(f"<br>{x}" for x in out)
+
+
 def classics_table(rows, metrics) -> str:
     items = []
     for r in rows:
@@ -163,7 +171,7 @@ def classics_table(rows, metrics) -> str:
         star = f"[{stars:,}](https://github.com/{r['repo']})" if r["repo"] else "未公開"
         why = "、".join(reasons(year, cites, stars, upvotes, r["venue"], r["tags"]))
         lines.append(f"| {t} | {why} | {year or ''} | {paper_link(r)} | {r['org']} | {r['note']} "
-                     f"| {r['venue']} | {cites:,} | {star} |")
+                     f"| {r['venue']}{award_text(r['award'])} | {cites:,} | {star} |")
     return "\n".join(lines)
 
 
